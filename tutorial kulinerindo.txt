@@ -1,0 +1,322 @@
+
+
+cara ke 2 
+untuk memakai reach versi terbaru 
+
+
+
+1.
+
+2.
+
+3.
+
+
+ terminal CMD perinah 
+ke
+1. 
+
+2. C:\Users\AMIR SY\Desktop>create-react-app my-app
+
+
+
+
+
+2. C:\Users\AMIR SY\Desktop>cd my-app
+
+3. C:\Users\AMIR SY\Desktop\my-app>npm start
+
+
+4. lihat di google dengan pot 
+
+http://localhost:3000/
+
+
+5.
+ API ZOMATO 
+
+e17436e23f1b0dea3bf7e1bc621e2eb8
+
+
+
+6. FOLDER 
+PUBLIC
+
+index.thml 
+
+
+
+7. download file ccs bootstrap 
+
+
+8. download file bootstrap dan entrak 
+kemudian copy file tersebut paste ke aplikasi foolder public 
+
+
+
+9. download thema 
+https://bootswatch.com/
+dengan thema Flatly 
+
+
+
+10. taruh file tersebut 
+
+di public-> bootstyrap-> css -> paste  
+
+
+
+ 
+PERTEMUANK KE 2 
+
+
+1. PUBLIC
+index.html
+
+ <!-- pertemuan ke 1 menyiapkan thema  -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/bootstrap-4.5.0-dist/css/bootstrap.min.css" crossorigin="anonymous">
+  
+  
+
+2. App.js
+
+import React from 'react';
+
+import mainImage from "./assets/images/aneka-menu.png";
+
+function App() {
+  return (
+    <>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+          <a className="navbar-brand text-white">KULINER INDO</a>
+        </nav>
+        <div className="row" style={{ marginBottom: 30}}>
+            <img src={mainImage} width="100%" alt="Aneka Manu"/>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="card text-white bg-success mb-3 text-center">
+              <div className="card-header"><h1>SELAMAT DATANG DI KULINER INDO</h1></div>
+                <div className="card-body">
+                    <h3 className="card-title">PALING ENAK PALING NIKMAT DENGAN MASAKAH INDO</h3>
+                    <p className="card-text">INFORMASI RESTAURAN INDONESIA</p>
+                    <p className="card-text">TERJAMIN HALAL ANEKA MENU</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+  </>
+  
+  );
+}
+
+export default App;
+
+
+
+
+
+
+SUKSES 
+// PER 3 
+
+3. App.js
+
+// MENGAMBIL DATA ARRAY DARI ZOMATO 
+data yang di ambil , id name,dan countr
+
+
+function App() {
+    // array dummy per 3 
+    const citiesDummy = [
+        { id: 72,     name: "Jakarta", country_name: "Indonesia"},
+        { id: 11052,  name: "Bandung", country_name: "Indonesia"},
+        { id: 170,    name: "Bali",    country_name: "Indonesia"}
+    ];
+
+
+
+
+
+
+	  <div className="container" style={{ marginTop: 30, marginBottom: 30 }}>
+          <div className="row">
+            <div className="col-12">
+                <h2>FEATURED CITIES</h2>
+            </div>
+          </div>
+     
+          <div className="row">
+            {citiesDummy.map(city => 
+              <div className="col-4">
+                <div className="card bg-light mb-3">
+                  <div className="card-body">
+                    <h3 className="card-title">{city.name}</h3>
+                      <p>{city.country_name}</p>
+                      <a href="/#" className="card-text">
+                      SEE RESTAURAN IN{city.name}</a>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+      </div>
+
+
+  SUKSES 
+
+
+
+// PER 4 
+
+1. BUAT FOLDER COMPONENT DI DALAM SRC 
+ BUAT FILE DI DALAM COMPONENT 
+	
+CityCard.js
+
+import React from 'react';
+
+// funtion 
+const CityCard = props => (
+
+           <div className="col-4">
+                <div className="card bg-light mb-3">
+                  <div className="card-body">
+                    <h3 className="card-title">{props.city.name}</h3>
+                      <p>{props.city.country_name}</p>
+                      <a href="/#" className="card-text">
+                      SEE RESTAURAN IN{props.city.name}</a>
+                  </div>
+                </div>
+              </div>
+)
+
+export default CityCard;
+
+
+2. App.js
+
+<div className="container" style={{ marginTop: 30, marginBottom: 30 }}>
+          <div className="row">
+            <div className="col-12">
+                <h2>FEATURED CITIES</h2>
+            </div>
+          </div>
+     
+          <div className="row">
+            {citiesDummy.map(city => (
+
+                // sama dengan include script yamg awalnya di pindah ke CityCard setelah itu di include
+                <CityCard key={city.id} city={city} />
+
+            ))}
+          </div>
+      </div> 
+
+
+
+3.
+
+4.
+
+5.
+
+6.
+
+7.
+
+8.
+
+9.
+
+10.
+
+
+
+1.
+
+2.
+
+3.
+
+4.
+
+5.
+
+6.
+
+7.
+
+8.
+
+9.
+
+10.
+
+
+
+1.
+
+2.
+
+3.
+
+4.
+
+5.
+
+6.
+
+7.
+
+8.
+
+9.
+
+10.
+
+
+
+1.
+
+2.
+
+3.
+
+4.
+
+5.
+
+6.
+
+7.
+
+8.
+
+9.
+
+10.
+
+
+
+1.
+
+2.
+
+3.
+
+4.
+
+5.
+
+6.
+
+7.
+
+8.
+
+9.
+
+10.
+
